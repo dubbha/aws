@@ -6,7 +6,7 @@ phases:
       - yarn install
       - echo $CODEBUILD_SOURCE_VERSION
       - echo $CODEBUILD_WEBHOOK_HEAD_REF
-      - export BRANCH=`echo $CODEBUILD_WEBHOOK_HEAD_REF | sed /refs\/heads\///`
+      - export BRANCH=`echo $CODEBUILD_WEBHOOK_HEAD_REF | sed 's/refs\/heads\///gi'`
       - echo $BRANCH
   # pre_build:
   #   commands:
