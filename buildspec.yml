@@ -4,6 +4,8 @@ phases:
   install:
     commands:
       - yarn install
+      - echo $CODEBUILD_SOURCE_VERSION
+      - echo $CODEBUILD_WEBHOOK_HEAD_REF
   # pre_build:
   #   commands:
   #     - yarn workspace web test
