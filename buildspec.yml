@@ -4,6 +4,7 @@ phases:
   install:
     commands:
       - yarn install
+      - echo $CODEBUILD_SOURCE_VERSION
   # pre_build:
   #   commands:
   #     - yarn workspace web test
